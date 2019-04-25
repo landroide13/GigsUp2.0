@@ -1,3 +1,15 @@
-<p>
-  documents works!
-</p>
+<h2>
+  {{ title }}
+</h2>
+
+<div class="card" style="width: 18rem;" *ngFor="let doc of documents">
+  <img src="{{ doc.image_url }}"" class=" card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ doc.title }}</h5>
+    <p class="card-text">{{ doc.description }}</p>
+    <div>
+      <a class="btn btn-sm btn-primary" href="{{ doc.file_url }}">Download File</a>
+    </div>
+    <p class="card-text"><small class="text-muted">{{ doc.updated_at }}</small></p>
+  </div>
+</div>
